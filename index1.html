@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Feedback Form</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: helvetica;
+		}
+		body{
+			background-color: #ffd700;
+		}
+		.main{
+			width: 500px;
+			margin: 50px auto;
+			border-radius: 10px;
+			border: 5px solid #dc143c;
+			border-left: 40px solid #dc143c;
+			box-shadow: 1px 2px 10px #555;
+		}
+		.info{
+			width: 100%;
+			background-color: #dc143c;
+			padding: 7px;
+			text-shadow: 1px 1px 1px #222;
+			color: #fff;
+			font-size: 20px;
+		}
+		.form-box{
+			padding: 20px;
+			background-color: #eee;
+		}
+		label{
+			color: navy;
+			font-size: 18px;
+		}
+		.inp,.msg-box{
+			width: 100%;
+			padding: 10px;
+			margin-top: 4px;
+			margin-bottom: 5px;
+			border-radius: 5px;
+			border: 2px solid #dc143c;
+			font-weight: bold;
+			color: #dc143c;
+			border-right: 15px solid #dc143c;
+			border-left: 15px solid #dc143c;
+			resize: none;
+		}
+		.msg-box{
+			height: 80px;
+		}
+		.inp:focus,.msg-box:focus{
+			outline: none;
+			border: 2px solid navy;
+			border-right: 15px solid navy;
+			border-left: 15px solid navy;
+		}
+		.sub-btn{
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 5px;
+			border: none;
+			background: linear-gradient(#dc143c,#800000);
+			cursor: pointer;
+			color: #fff;
+			font-size: 20px;
+			text-shadow: 1px 1px 1px #444;
+		}
+		.sub-btn:hover{
+			background: linear-gradient(#800000,#dc143c);
+			opacity: 0.8;
+			transition: all ease-out 0.2s;
+		}
+		.sub-btn:focus{
+			outline: none;
+		}
+		@media(max-width: 720px){
+			.main{
+				width: 90%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="info">KINDLY FILL THE FORM BELOW TO PLACE YOUR ORDER</div>
+		<form action="mail_handler.php" method="post" name="form" class="form-box">
+			<p><label> Full Name (required)<br>
+    <span class="wpcf7-form-control-wrap full-name"><input type="text" name="full-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Address (required)<br>
+    <span class="wpcf7-form-control-wrap your-address"><input type="text" name="your-address" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> State (required)<br>
+    <span class="wpcf7-form-control-wrap your-state"><input type="text" name="your-state" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+    <p><label> Email (required)<br>
+    <span class="wpcf7-form-control-wrap your-state"><input type="text" name="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Local Government (required)<br>
+    <span class="wpcf7-form-control-wrap your-LG"><input type="text" name="your-LG" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Landmark or Nearest Bus Stop<br>
+    <span class="wpcf7-form-control-wrap landmark"><input type="text" name="landmark" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span> </label></p>
+<p><label> Phone Number (required)<br>
+    <span class="wpcf7-form-control-wrap your-number"><input type="text" name="number" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" aria-required="true" aria-invalid="false"></span></label></p>
+<p><label> Quantity Needed (required)<br>
+<span class="wpcf7-form-control-wrap your-quantity"><select name="your-quantity" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false"><option value="">---</option><option value="1 (#12,000)">1 (#12,000)</option><option value="2 (#24,000)">2 (#24,000)</option><option value="3 (#36,000)">3 (#36,000)</option><option value="4 (#48,000)">4 (#48,000)</option><option value="5 (#60,000)">5 (#60,000)</option></select></span></label></p>
+			<input type="submit" name="submit" value="Send" class="sub-btn">
+		</form>
+	</div>
+</body>
+</html>
